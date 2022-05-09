@@ -1,0 +1,85 @@
+import React from "react";
+import { Button, Col, Form, Row } from "react-bootstrap";
+
+const AddItems = () => {
+  const handelProduct = (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const description = event.target.dec.value;
+    const price = event.target.price.value;
+    const supplier = event.target.suplier.value;
+    const img = event.target.img.value;
+    const quantity = event.target.quantity.value;
+    const newAddProduct = { name, description, price, supplier, img, quantity };
+    console.log(newAddProduct);
+    fetch("http://localhost:5000/items", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newAddProduct),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        event.target.reset();
+      });
+  };
+  return (
+    <div className='container'>
+      <h1>Add Your Product</h1>
+      <div className='w-50 mx-auto'>
+        <Form onSubmit={handelProduct}>
+          <Form.Group controlId='formGridText'>
+            <Form.Label>Product Picture Url</Form.Label>
+            <Form.Control
+              type='text'
+              name='img'
+              placeholder='Give Your Product Pic Url'
+            />
+          </Form.Group>
+          <Form.Group controlId='formGridText'>
+            <Form.Label>Product Name</Form.Label>
+            <Form.Control type='text' name='name' placeholder='Product Name' />
+          </Form.Group>
+
+          <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
+            <Form.Label>Example textarea</Form.Label>
+            <Form.Control as='textarea' name='dec' rows={2} />
+          </Form.Group>
+
+          <Row className='mb-3'>
+            <Form.Group as={Col}>
+              <Form.Label>Per Unit Price</Form.Label>
+              <Form.Control type='number' name='price' />
+            </Form.Group>
+
+            <Form.Group as={Col}>
+              <Form.Label>Suplier Name Name</Form.Label>
+              <Form.Control
+                type='text'
+                name='suplier'
+                placeholder='suplier Name'
+              />
+            </Form.Group>
+
+            <Form.Group as={Col} controlId='formGridZip'>
+              <Form.Label>Quantity</Form.Label>
+              <Form.Control
+                type='number'
+                name='quantity'
+                placeholder='Product Quantity'
+              />
+            </Form.Group>
+          </Row>
+
+          <Button className='w-50 ' variant='primary' type='submit'>
+            Submit
+          </Button>
+        </Form>
+      </div>
+    </div>
+  );
+};
+
+export default AddItems;
