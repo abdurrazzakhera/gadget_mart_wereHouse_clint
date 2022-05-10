@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import UseItems from "../../../Hooks/UseItems";
 
 const UpdateInventorys = () => {
   const [items, setItems, isrelode, setRelode] = UseItems("");
-  const [stockInput, setStockInput] = useState("");
+  const inputRef = useRef("");
   let index = 1;
   const navigate = useNavigate();
 
@@ -32,13 +32,9 @@ const UpdateInventorys = () => {
       });
   };
 
-  //handel stock filed
-  const handelInput = (event) => {
-    setStockInput(event.target.value);
-  };
-
   //Handel re Stock
   const handelReStock = (id) => {
+    const stockInput = inputRef.current.value;
     const newInput = parseInt(stockInput);
     const products = items.find((item) => item._id == id);
     const stockProduct = parseInt(products?.quantity);
@@ -95,7 +91,7 @@ const UpdateInventorys = () => {
                 <td>{item.supplier}</td>
                 <td>{item.quantity}</td>
                 <td>
-                  <input onBlur={handelInput} type='number' name='' id='' />
+                  <input ref={inputRef} type='number' name='' id='' />
                 </td>
                 <td>
                   <Button onClick={() => handelReStock(item._id)}>

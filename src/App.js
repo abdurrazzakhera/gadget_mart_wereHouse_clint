@@ -7,6 +7,11 @@ import { Route, Routes } from "react-router-dom";
 import AddItems from "./Pages/Home/Additems/AddItems";
 import UpdateInventorys from "./Pages/Home/UpdateInventorys/UpdateInventorys";
 import ManageProduct from "./Pages/Home/ManageProduct/ManageProduct";
+import Login from "./Pages/Home/Login/Login/Login";
+import SingUp from "./Pages/Home/Login/SingUp/SingUp";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import RequireAuth from "./Pages/Home/Login/RequirAuth/RequirAuth";
 
 function App() {
   return (
@@ -17,14 +22,21 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route
           path='/updateInventory'
-          element={<UpdateInventorys></UpdateInventorys>}
+          element={
+            <RequireAuth>
+              <UpdateInventorys></UpdateInventorys>
+            </RequireAuth>
+          }
         ></Route>
         <Route
           path='/manageProduct'
           element={<ManageProduct></ManageProduct>}
         ></Route>
         <Route path='/additems' element={<AddItems></AddItems>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/singup' element={<SingUp></SingUp>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
