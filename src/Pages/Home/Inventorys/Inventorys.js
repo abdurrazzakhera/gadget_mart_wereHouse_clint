@@ -28,23 +28,25 @@ const Inventorys = () => {
           </tr>
         </thead>
         <tbody>
-          {items.map((item) => (
-            <tr key={item._id}>
-              <th scope='row'>{index++}</th>
-              <td>{item.img}</td>
-              <td>{item.name}</td>
+          {items
+            .map((item) => (
+              <tr key={item._id}>
+                <th scope='row'>{index++}</th>
+                <td>{item.img}</td>
+                <td>{item.name}</td>
 
-              <td>{item.description}</td>
-              <td>{item.price}</td>
-              <td>{item.supplier}</td>
-              <td>{item.quantity}</td>
-              <td>
-                <Button onClick={() => navigate("/updateInventory")}>
-                  Update
-                </Button>
-              </td>
-            </tr>
-          ))}
+                <td>{item.description}</td>
+                <td>{item.price}</td>
+                <td>{item.supplier}</td>
+                <td>{item.quantity}</td>
+                <td>
+                  <Button onClick={() => navigate("/updateInventory")}>
+                    Update
+                  </Button>
+                </td>
+              </tr>
+            ))
+            .slice(0, 6)}
         </tbody>
         <tfoot>
           <tr>

@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Pages/Home/Home/Home";
 import Header from "./Pages/Shared/Header/Header";
@@ -12,6 +11,7 @@ import SingUp from "./Pages/Home/Login/SingUp/SingUp";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./Pages/Home/Login/RequirAuth/RequirAuth";
+import MyItems from "./Pages/MyItems/MyItems";
 
 function App() {
   return (
@@ -25,6 +25,14 @@ function App() {
           element={
             <RequireAuth>
               <UpdateInventorys></UpdateInventorys>
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path='/myitems'
+          element={
+            <RequireAuth>
+              <MyItems></MyItems>
             </RequireAuth>
           }
         ></Route>
