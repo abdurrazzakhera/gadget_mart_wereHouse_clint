@@ -1,0 +1,10 @@
+.navClass {
+  background-color: #3e83bfb8;
+}
+.navbarlink a {
+  color: #131313 !important;
+  font-size: 22px;
+  background: #3e83bf4f;
+  margin-right: 5px;
+  border-radius: 5px;
+}

@@ -4,6 +4,7 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
+import "./Header.css";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -12,44 +13,41 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <Navbar
-      collapseOnSelect
-      expand='lg'
-      sticky='top'
-      bg='secondary'
-      variant='dark'
-    >
+    // sticky='top'
+    <Navbar collapseOnSelect ex pand='lg' className='navClass '>
       <Container>
         <Navbar.Brand as={Link} to='/'>
-          Home
+          HOME
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='me-auto'>
+          <Nav className='me-auto navbarlink'>
+            <Nav.Link href='#deets'>BLOG</Nav.Link>
+            <Nav.Link href='#deets'>ABOUT US</Nav.Link>
+          </Nav>
+          <Nav className='navbarlink'>
             {user && (
               <>
                 <Nav.Link as={Link} to='/updateInventory'>
-                  Inventorys
+                  UPDATING
                 </Nav.Link>
                 <Nav.Link as={Link} to='/manageProduct'>
-                  Product Manage
+                  MANAGE ITEMS
+                </Nav.Link>
+
+                <Nav.Link as={Link} to='/myitems'>
+                  MY ITEMS
                 </Nav.Link>
                 <Nav.Link as={Link} to='/additems'>
-                  Add Item
-                </Nav.Link>
-                <Nav.Link as={Link} to='/myitems'>
-                  My Items
+                  ADD ITEMS
                 </Nav.Link>
               </>
             )}
-          </Nav>
-          <Nav>
-            <Nav.Link href='#deets'>About</Nav.Link>
             {user ? (
-              <Button onClick={handelSingOut}>Sing Out</Button>
+              <Button onClick={handelSingOut}>LOGOUT</Button>
             ) : (
               <Nav.Link as={Link} to='/login'>
-                Login
+                LOGIN
               </Nav.Link>
             )}
           </Nav>
