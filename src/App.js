@@ -12,6 +12,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import RequireAuth from "./Pages/Home/Login/RequirAuth/RequirAuth";
 import MyItems from "./Pages/MyItems/MyItems";
+import Footer from "./Pages/Shared/Footer/Footer";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/singup' element={<SingUp></SingUp>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer />
     </div>
   );

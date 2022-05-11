@@ -14,10 +14,14 @@ const Header = () => {
   };
   return (
     // sticky='top'
-    <Navbar collapseOnSelect ex pand='lg' className='navClass '>
+    <Navbar collapseOnSelect expand='lg' sticky='top' className='navClass'>
       <Container>
-        <Navbar.Brand as={Link} to='/'>
-          HOME
+        <Navbar.Brand>
+          <Nav className='navbarlink'>
+            <Nav.Link as={Link} to='/'>
+              HOME
+            </Nav.Link>
+          </Nav>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>

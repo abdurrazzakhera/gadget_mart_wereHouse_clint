@@ -1,58 +1,50 @@
 [
   {
-    "name": "demo name",
-    "description": "lorem lorem lorem ipsum ipsum ipsum",
-    "price": "50",
-    "supplier": "demo supplier",
-    "img": "",
+    "name": "Xiaomi Poco Watch",
+    "description": "New Xiaomi Poco Watch Release Comming Soon",
+    "price": "100",
+    "supplier": "Xiaomi",
+    "img": "https://i.ibb.co/NZZZyVn/xiaomi-redmi-watch2.jpg",
     "quantity": "12"
   },
   {
-    "name": "demo name",
-    "description": "lorem lorem lorem ipsum ipsum ipsum",
-    "price": "50",
-    "supplier": "demo supplier",
-    "img": "",
+    "name": "Xiaomi Poco F4 GT",
+    "description": "Available. Released 2022, April 28",
+    "price": "666",
+    "supplier": "Xiaomi",
+    "img": "https://i.ibb.co/g6SPCZV/xiaomi-poco-f4-gt.jpg",
     "quantity": "12"
   },
   {
-    "name": "demo name",
-    "description": "lorem lorem lorem ipsum ipsum ipsum",
-    "price": "50",
-    "supplier": "demo supplier",
-    "img": "",
+    "name": "OnePlus Nord N20 5G",
+    "description": "Available. Released 2022, April 28",
+    "price": "350",
+    "supplier": "OnePlus Ltd",
+    "img": "https://i.ibb.co/926d7rm/oneplus-nord-n20-5g.jpg",
     "quantity": "12"
   },
   {
-    "name": "demo name",
+    "name": "OnePlus Watch",
     "description": "lorem lorem lorem ipsum ipsum ipsum",
-    "price": "50",
-    "supplier": "demo supplier",
-    "img": "",
+    "price": "136",
+    "supplier": "OnePlus Ltd",
+    "img": "https://i.ibb.co/n1J9w1C/oneplus-watch.jpg",
     "quantity": "12"
   },
   {
-    "name": "demo name",
-    "description": "lorem lorem lorem ipsum ipsum ipsum",
-    "price": "50",
-    "supplier": "demo supplier",
-    "img": "",
+    "name": "Huawei nova Y70 Plus",
+    "description": "Available. Released 2022, May 01",
+    "price": "299",
+    "supplier": "Huawei Ltd",
+    "img": "https://i.ibb.co/Cbxtqmv/huawei-nova-y70-plus.jpg",
     "quantity": "12"
   },
   {
-    "name": "demo name",
-    "description": "lorem lorem lorem ipsum ipsum ipsum",
-    "price": "50",
-    "supplier": "demo supplier",
-    "img": "",
-    "quantity": "12"
-  },
-  {
-    "name": "demo name",
-    "description": "lorem lorem lorem ipsum ipsum ipsum",
-    "price": "50",
-    "supplier": "demo supplier",
-    "img": "",
+    "name": "Huawei Watch GT ",
+    "description": "Available. Released 2022, May 09",
+    "price": "159",
+    "supplier": "Huawei Ltd",
+    "img": "https://i.ibb.co/yg7NjBt/huawei-gt-runner.jpg",
     "quantity": "12"
   }
 ]

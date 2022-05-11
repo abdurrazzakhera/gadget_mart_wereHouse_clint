@@ -116,6 +116,8 @@ const UpdateInventorys = () => {
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 <td>{items.length}</td>
               </tr>
             </tfoot>

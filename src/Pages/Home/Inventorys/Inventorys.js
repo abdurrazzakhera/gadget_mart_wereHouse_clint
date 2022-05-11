@@ -48,7 +48,7 @@ const Inventorys = () => {
               ))
               .slice(0, 6)}
           </tbody>
-          <tfoot>
+          {/* <tfoot>
             <tr>
               <th scope='row'></th>
               <td>Total</td>
@@ -59,7 +59,7 @@ const Inventorys = () => {
               <td></td>
               <td>{items.length}</td>
             </tr>
-          </tfoot>
+          </tfoot> */}
         </table>
       </div>
     </div>
