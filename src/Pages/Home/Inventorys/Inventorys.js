@@ -32,7 +32,9 @@ const Inventorys = () => {
               .map((item) => (
                 <tr key={item._id}>
                   <td>{index++}</td>
-                  <td>{item.img}</td>
+                  <td>
+                    <img src={item.img} className='itemImg' alt='' />
+                  </td>
                   <td>{item.name}</td>
 
                   <td>{item.description}</td>

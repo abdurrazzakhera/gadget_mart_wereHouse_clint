@@ -9,7 +9,7 @@ const ManageProduct = () => {
   // item delete Action
   const handleDelete = (id) => {
     console.log(id);
-    const url = `http://localhost:5000/items/${id}`;
+    const url = `https://immense-thicket-83418.herokuapp.com/items/${id}`;
     fetch(url, {
       method: "DELETE",
     })
@@ -45,11 +45,13 @@ const ManageProduct = () => {
               {items.map((item) => (
                 <tr key={item._id}>
                   <th scope='row'>{index++}</th>
-                  <td>{item.img}</td>
+                  <td>
+                    <img src={item.img} className='itemImg' alt='' />
+                  </td>
                   <td>{item.name}</td>
 
                   <td>{item.description}</td>
-                  <td>{item.price}</td>
+                  <td>${item.price}</td>
                   <td>{item.supplier}</td>
                   <td>{item.quantity}</td>
                   <td>

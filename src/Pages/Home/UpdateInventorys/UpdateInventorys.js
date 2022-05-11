@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import UseItems from "../../../Hooks/UseItems";
+import "./UpdateInventorys.css";
 
 const UpdateInventorys = () => {
   const [items, setItems, isrelode, setRelode] = UseItems("");
@@ -17,7 +18,7 @@ const UpdateInventorys = () => {
 
     // console.log(newStockProduct);
     // console.log(id);
-    const url = `http://localhost:5000/items/${id}`;
+    const url = `https://immense-thicket-83418.herokuapp.com/items/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -41,7 +42,7 @@ const UpdateInventorys = () => {
     const newStockProduct = stockProduct + newInput;
     console.log(newStockProduct);
 
-    const url = `http://localhost:5000/items/${id}`;
+    const url = `https://immense-thicket-83418.herokuapp.com/items/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -84,15 +85,23 @@ const UpdateInventorys = () => {
               {items.map((item) => (
                 <tr key={item._id}>
                   <th scope='row'>{index++}</th>
-                  <td>{item.img}</td>
+                  <td>
+                    <img src={item.img} className='itemImg' alt='' />
+                  </td>
                   <td>{item.name}</td>
 
                   <td>{item.description}</td>
-                  <td>{item.price}</td>
+                  <td>${item.price}</td>
                   <td>{item.supplier}</td>
                   <td>{item.quantity}</td>
                   <td>
-                    <input ref={inputRef} type='number' name='' id='' />
+                    <input
+                      className='stockField'
+                      ref={inputRef}
+                      type='number'
+                      name=''
+                      id=''
+                    />
                   </td>
                   <td>
                     <Button onClick={() => handelReStock(item._id)}>

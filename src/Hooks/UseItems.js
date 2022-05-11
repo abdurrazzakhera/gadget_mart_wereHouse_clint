@@ -4,7 +4,7 @@ const UseItems = () => {
   const [items, setItems] = useState([]);
   const [isrelode, setRelode] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/items")
+    fetch("https://immense-thicket-83418.herokuapp.com/items")
       .then((res) => res.json())
       .then((data) => {
         setItems(data);

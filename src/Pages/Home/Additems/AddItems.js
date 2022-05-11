@@ -24,7 +24,7 @@ const AddItems = () => {
       email,
     };
     console.log(email);
-    fetch("http://localhost:5000/items", {
+    fetch("https://immense-thicket-83418.herokuapp.com/items", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
