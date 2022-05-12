@@ -7,6 +7,7 @@ import "./UpdateInventorys.css";
 const UpdateInventorys = () => {
   const [items, setItems, isrelode, setRelode] = UseItems("");
   const inputRef = useRef("");
+  const [inputvalue, setInputValue] = useState("");
   let index = 1;
   const navigate = useNavigate();
 
@@ -33,14 +34,18 @@ const UpdateInventorys = () => {
       });
   };
 
+  const handelInputBlur = (event) => {
+    setInputValue(event.target.value);
+  };
+
   //Handel re Stock
   const handelReStock = (id) => {
-    const stockInput = inputRef.current.value;
-    const newInput = parseInt(stockInput);
+    // const stockInput = inputRef.current.value;
+    const newInput = parseInt(inputvalue);
     const products = items.find((item) => item._id == id);
     const stockProduct = parseInt(products?.quantity);
     const newStockProduct = stockProduct + newInput;
-    console.log(newStockProduct);
+    console.log(newInput);
 
     const url = `https://immense-thicket-83418.herokuapp.com/items/${id}`;
     fetch(url, {
@@ -97,9 +102,9 @@ const UpdateInventorys = () => {
                   <td>
                     <input
                       className='stockField'
+                      onBlur={handelInputBlur}
                       ref={inputRef}
                       type='number'
-                      name=''
                       id=''
                     />
                   </td>
