@@ -1,0 +1,17 @@
+.btn-custom {
+  width: 100% !important;
+}
+
+.borderOr {
+  display: flex;
+  align-items: center;
+}
+.borderOr div {
+  border: 1px solid gray;
+  height: 2px;
+  width: 47%;
+  border-radius: 50%;
+}
+.borderOr p {
+  margin: -1px 10px 0;
+}

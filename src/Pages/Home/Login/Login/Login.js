@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import auth from "../../../../firebase.init";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -31,39 +32,40 @@ const Login = () => {
     navigate(from, { replace: true });
   }
   return (
-    <div className='container w-50 mx-auto'>
-      <h1>Please Login</h1>
-      <Form onSubmit={handelLogin}>
-        <Form.Group className='mb-3' controlId='formBasicEmail'>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control
-            ref={emailRef}
-            type='email'
-            placeholder='Enter email'
-            required
-          />
-          <Form.Text className='text-muted'>
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
+    <div className='container-lg w-100 mx-auto row justify-content-md-center py-5 '>
+      <div className='col-md-12 col-lg-6'>
+        <SocialLogin></SocialLogin>
+        <h1>Please Login</h1>
 
-        <Form.Group className='mb-3' controlId='formBasicPassword'>
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            ref={passwordRef}
-            type='password'
-            placeholder='Password'
-            required
-          />
-        </Form.Group>
-        {errorElementEmail}
-        <Button variant='primary' type='submit'>
-          Submit
-        </Button>
-      </Form>
-      <p>
-        If Not Register ? <Link to='/singup'>Sign Up</Link>
-      </p>
+        <Form onSubmit={handelLogin}>
+          <Form.Group className='mb-3' controlId='formBasicEmail'>
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              ref={emailRef}
+              type='email'
+              placeholder='Enter email'
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className='mb-3' controlId='formBasicPassword'>
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              ref={passwordRef}
+              type='password'
+              placeholder='Password'
+              required
+            />
+          </Form.Group>
+          {errorElementEmail}
+          <Button variant='primary' type='submit'>
+            Submit
+          </Button>
+        </Form>
+        <p>
+          If Not Register ? <Link to='/singup'>Sign Up</Link>
+        </p>
+      </div>
     </div>
   );
 };
