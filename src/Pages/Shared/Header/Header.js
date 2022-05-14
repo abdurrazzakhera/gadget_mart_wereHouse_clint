@@ -50,7 +50,12 @@ const Header = () => {
               </>
             )}
             {user ? (
-              <Button onClick={handelSingOut}>LOGOUT</Button>
+              <Button
+                className='bgPrimary border border-2 '
+                onClick={handelSingOut}
+              >
+                LOGOUT
+              </Button>
             ) : (
               <Nav.Link as={Link} to='/login'>
                 LOGIN

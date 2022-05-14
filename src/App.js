@@ -14,6 +14,7 @@ import RequireAuth from "./Pages/Home/Login/RequirAuth/RequirAuth";
 import MyItems from "./Pages/MyItems/MyItems";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Blogs from "./Pages/Blogs/Blogs";
+import NotFound from "./Pages/Shared/NotFound/NotFound";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/singup' element={<SingUp></SingUp>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />

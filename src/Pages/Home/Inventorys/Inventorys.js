@@ -42,7 +42,10 @@ const Inventorys = () => {
                   <td>{item.supplier}</td>
                   <td>{item.quantity}</td>
                   <td>
-                    <Button onClick={() => navigate("/updateInventory")}>
+                    <Button
+                      className='bgPrimary'
+                      onClick={() => navigate("/updateInventory")}
+                    >
                       Update
                     </Button>
                   </td>

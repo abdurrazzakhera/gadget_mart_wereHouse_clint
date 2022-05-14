@@ -10,14 +10,17 @@ const ManageProduct = () => {
   const handleDelete = (id) => {
     console.log(id);
     const url = `https://immense-thicket-83418.herokuapp.com/items/${id}`;
-    fetch(url, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const remainigItem = items.filter((item) => item._id !== id);
-        setItems(remainigItem);
-      });
+    const confirm = window.confirm("Are you sure Delete Item's");
+    if (confirm) {
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const remainigItem = items.filter((item) => item._id !== id);
+          setItems(remainigItem);
+        });
+    }
   };
   return (
     <div>
@@ -55,7 +58,10 @@ const ManageProduct = () => {
                   <td>{item.supplier}</td>
                   <td>{item.quantity}</td>
                   <td>
-                    <Button onClick={() => handleDelete(item._id)}>
+                    <Button
+                      className='bgPrimary'
+                      onClick={() => handleDelete(item._id)}
+                    >
                       Delete
                     </Button>
                   </td>

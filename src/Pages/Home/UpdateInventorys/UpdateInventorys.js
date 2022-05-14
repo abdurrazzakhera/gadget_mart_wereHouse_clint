@@ -109,12 +109,18 @@ const UpdateInventorys = () => {
                     />
                   </td>
                   <td>
-                    <Button onClick={() => handelReStock(item._id)}>
+                    <Button
+                      className='bgPrimary'
+                      onClick={() => handelReStock(item._id)}
+                    >
                       Restock
                     </Button>
                   </td>
                   <td>
-                    <Button onClick={() => handelDeliverd(item._id)}>
+                    <Button
+                      className='bgPrimary'
+                      onClick={() => handelDeliverd(item._id)}
+                    >
                       deleverd
                     </Button>
                   </td>
