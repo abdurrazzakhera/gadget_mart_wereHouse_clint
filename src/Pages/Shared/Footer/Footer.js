@@ -41,7 +41,7 @@ const Footer = () => {
           <div className='col-md text-md-center'>
             <ul className='social list-unstyled'>
               <li>
-                <span className='icon-twitter'></span>
+                <span></span>
               </li>
               <li>
                 <span className='icon-facebook'></span>
@@ -56,7 +56,9 @@ const Footer = () => {
                 <span className='icon-dribbble'></span>
               </li>
             </ul>
-            <p className='btn btn-tertiary'>Contact Us</p>
+            <p className='btn btn-tertiary bgPrimary border border-2 text-white rounded-pill py-2 px-4'>
+              Contact Us
+            </p>
           </div>
         </div>
 
