@@ -5,7 +5,7 @@ import {
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import Loading from "../../../Shared/Loading/Loading";
 
@@ -47,7 +47,7 @@ const SingUp = () => {
     <div className='container w-100 mx-auto row justify-content-md-center py-5'>
       <div className='col-md-12 col-lg-6'>
         <SocialLogin></SocialLogin>
-        <h1>Please Sign Up</h1>
+        <h1 className='textPrimary'>Please Sign Up</h1>
         <Form onSubmit={handelLogin}>
           <Form.Group className='mb-3' controlId='formBasicText'>
             <Form.Label>Name</Form.Label>
@@ -78,9 +78,15 @@ const SingUp = () => {
             />
           </Form.Group>
           {errorElementEmail}
-          <Button variant='primary' type='submit'>
+          <Button className='bgPrimary' variant='primary' type='submit'>
             Submit
           </Button>
+          <p className='mt-2'>
+            If Register Already ?{" "}
+            <Link className='text-decoration-none textPrimary' to='/login'>
+              Log In
+            </Link>
+          </p>
         </Form>
       </div>
     </div>

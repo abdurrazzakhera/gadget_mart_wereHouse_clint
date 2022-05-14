@@ -1,12 +1,16 @@
 import React from "react";
 import "./Footer.css";
+import socialaimg1 from "../../../images/footerSocial/social1.png";
+import socialaimg2 from "../../../images/footerSocial/social2.png";
+import socialaimg3 from "../../../images/footerSocial/social3.png";
+import socialaimg4 from "../../../images/footerSocial/social4.png";
 
 const Footer = () => {
   const date = new Date();
   return (
     <footer className='footer-48201 mt-3'>
       <div className='container'>
-        <div className='row'>
+        <div className='row text-center'>
           <div className='col-md-4 pr-md-5'>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
@@ -44,16 +48,24 @@ const Footer = () => {
                 <span></span>
               </li>
               <li>
-                <span className='icon-facebook'></span>
+                <span className='pe-2'>
+                  <img className='rounded-circle' src={socialaimg1} alt='' />
+                </span>
               </li>
               <li>
-                <span className='icon-pinterest'></span>
+                <span className='pe-2'>
+                  <img className='rounded-circle' src={socialaimg2} alt='' />
+                </span>
               </li>
               <li>
-                <span className='icon-instagram'></span>
+                <span className='pe-2'>
+                  <img className='rounded-circle' src={socialaimg3} alt='' />
+                </span>
               </li>
               <li>
-                <span className='icon-dribbble'></span>
+                <span className='pe-2'>
+                  <img className='rounded-circle' src={socialaimg4} alt='' />
+                </span>
               </li>
             </ul>
             <p className='btn btn-tertiary bgPrimary border border-2 text-white rounded-pill py-2 px-4'>

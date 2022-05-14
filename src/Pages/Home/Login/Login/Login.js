@@ -35,7 +35,7 @@ const Login = () => {
     <div className='container-lg w-100 mx-auto row justify-content-md-center py-5 '>
       <div className='col-md-12 col-lg-6'>
         <SocialLogin></SocialLogin>
-        <h1>Please Login</h1>
+        <h1 className='textPrimary'>Login Your Account</h1>
 
         <Form onSubmit={handelLogin}>
           <Form.Group className='mb-3' controlId='formBasicEmail'>
@@ -58,12 +58,15 @@ const Login = () => {
             />
           </Form.Group>
           {errorElementEmail}
-          <Button variant='primary' type='submit'>
+          <Button className='bgPrimary' variant='primary' type='submit'>
             Submit
           </Button>
         </Form>
         <p>
-          If Not Register ? <Link to='/singup'>Sign Up</Link>
+          If Not Register ?{" "}
+          <Link className='text-decoration-none textPrimary' to='/singup'>
+            Sign Up
+          </Link>
         </p>
       </div>
     </div>
