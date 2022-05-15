@@ -13,7 +13,7 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
 
   // firebase hoook auth
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user, error] =
     useSignInWithEmailAndPassword(auth);
 
   //Login handel function

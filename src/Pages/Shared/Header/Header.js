@@ -19,7 +19,7 @@ const Header = () => {
         <Navbar.Brand>
           <Nav className='navbarlink'>
             <Nav.Link as={Link} to='/'>
-              HOME
+              Gadget Mart
             </Nav.Link>
           </Nav>
         </Navbar.Brand>
@@ -29,7 +29,9 @@ const Header = () => {
             <Nav.Link as={Link} to='/blogs'>
               BLOG
             </Nav.Link>
-            <Nav.Link href='#about us'>ABOUT US</Nav.Link>
+            <Nav.Link as={Link} to='/about'>
+              ABOUT US
+            </Nav.Link>
           </Nav>
           <Nav className='navbarlink'>
             {user && (

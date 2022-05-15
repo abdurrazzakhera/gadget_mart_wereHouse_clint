@@ -41,7 +41,9 @@ const AddItems = () => {
   };
   return (
     <div className='container'>
-      <h1>Add Your Product</h1>
+      <div className='text-center'>
+        <h1 className='textPrimary py-3'>Added Your New Product</h1>
+      </div>
       <div className='w-50 mx-auto'>
         <Form onSubmit={handelProduct}>
           <Form.Group controlId='formGridText'>

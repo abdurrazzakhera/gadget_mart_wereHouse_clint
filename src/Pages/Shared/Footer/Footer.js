@@ -10,43 +10,45 @@ const Footer = () => {
   return (
     <footer className='footer-48201 mt-3'>
       <div className='container'>
-        <div className='row text-center'>
-          <div className='col-md-4 pr-md-5'>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              quasi perferendis ratione perspiciatis accusantium.
-            </p>
+        <div className='row'>
+          <div className='col-md-4 pr-md-5 text-center text-lg-start'>
+            <h4 className='border-bottom'>Out Address</h4>
+            <ul className='list-unstyled nav-links'>
+              <li>Address: 104b , block-d</li>
+              <li>Badda , Dhaka</li>
+              <li>Phone: +98111111</li>
+              <li>Email: gadget@mart.com</li>
+            </ul>
           </div>
-          <div className='col-md'>
+          <div className='col-md text-center text-lg-start'>
+            <h4 className='border-bottom'>Company</h4>
             <ul className='list-unstyled nav-links'>
               <li>About Us</li>
               <li>Portfolio</li>
               <li>Services</li>
               <li>Contact</li>
-              <li>Home</li>
             </ul>
           </div>
-          <div className='col-md'>
+          <div className='col-md text-center text-lg-start'>
+            <h4 className='border-bottom'>Services</h4>
             <ul className='list-unstyled nav-links'>
               <li>Clients</li>
               <li>Team</li>
               <li>Career</li>
-              <li>Testimonials</li>
               <li>Journal</li>
             </ul>
           </div>
-          <div className='col-md'>
+          <div className='col-md text-center text-lg-start'>
+            <h4 className='border-bottom'>Rolls</h4>
             <ul className='list-unstyled nav-links'>
               <li>Privacy Policy</li>
               <li>Terms &amp; Conditions</li>
               <li>Partners</li>
             </ul>
           </div>
-          <div className='col-md text-md-center'>
+          <div className='col-md text-center text-lg-start'>
+            <h4 className='border-bottom mb-3'>Contact</h4>
             <ul className='social list-unstyled'>
-              <li>
-                <span></span>
-              </li>
               <li>
                 <span className='pe-2'>
                   <img className='rounded-circle' src={socialaimg1} alt='' />

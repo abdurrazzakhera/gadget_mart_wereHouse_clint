@@ -38,9 +38,10 @@ const MyItems = () => {
   };
   return (
     <div>
-      <h2>This Page is Manage Product page</h2>
+      <div className='text-center'>
+        <h1 className='textPrimary py-3'>Manage Your Added Product Only</h1>
+      </div>
       <div className='w-75 mx-auto'>
-        <h2>Manage Your services : {myItems.length}</h2>
         <div className='table-responsive-md'>
           <table className=' table table-bordered table-hover table-striped'>
             <thead>

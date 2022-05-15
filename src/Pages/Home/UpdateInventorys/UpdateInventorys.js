@@ -64,9 +64,10 @@ const UpdateInventorys = () => {
   };
   return (
     <div>
-      <h1>This is update page</h1>
+      <div className='text-center'>
+        <h1 className='textPrimary py-3'>Delivery And ReStock Your Product</h1>
+      </div>
       <div className='w-75 mx-auto'>
-        <h2>Manage Your services : {items.length}</h2>
         <div className='table-responsive-md'>
           <table className=' table table-bordered table-hover table-striped'>
             <thead>
