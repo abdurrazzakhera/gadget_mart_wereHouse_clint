@@ -1,10 +1,10 @@
-# Getting Started with AR'H Photography
+# Getting Started with Gadget Mart
 
 Live Site : [Gadget Mart](https://werehouse-11.web.app/).
 
 ### Project Details .
 
-- Use JavaScript React Latest Vertion.
+- Use JavaScript React Latest Version.
 - React Router V6 use (latest Version).
 
 * Implement latest Log in Method with Google.
